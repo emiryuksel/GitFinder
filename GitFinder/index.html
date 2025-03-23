@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Github Finder</title>
+    <title>GitFinder</title>
 
     <!-- Bootstrap 5 CDN -->
     <link
@@ -82,35 +82,34 @@
   <body>
     <div class="container searchContainer">
       <div class="search card p-4">
-        <h3 class="text-center">Github Kullanıcılarını Arayın</h3>
+        <h3 class="text-center">Search GitHub Users</h3>
         <p class="text-center text-muted">
-          Bir kullanıcı adı girin ve bilgilerine ulaşın!
+          Enter a username to view profile details!
         </p>
         <form id="github-form" class="d-flex flex-column">
           <input
             type="text"
             name="githubname"
-            s
             id="githubname"
             class="form-control rounded-3 mb-3"
-            placeholder="Github Kullanıcı Adı"
+            placeholder="GitHub Username"
           />
-          <button type="submit" class="btn btn-dark">Ara</button>
+          <button type="submit" class="btn btn-dark">Search</button>
         </form>
       </div>
 
       <div id="profile" class="mt-4"></div>
 
-      <h3 class="page-heading mt-5">En Son Repolar</h3>
+      <h3 class="page-heading mt-5">Latest Repositories</h3>
       <hr />
       <div id="repos"></div>
 
-      <h3 class="page-heading mt-5">Son Aramalar</h3>
+      <h3 class="page-heading mt-5">Recent Searches</h3>
       <div id="lastSearch">
         <ul class="list-group" id="last-users"></ul>
         <hr />
         <button id="clear-last-users" class="btn clear-btn w-100">
-          Son Arananları Temizle
+          Clear Recent Searches
         </button>
       </div>
     </div>
