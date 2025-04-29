@@ -22,20 +22,20 @@ class UI {
             <hr>
             <h5 id="fullName"><strong>${user.name}</strong></h5>
             <hr>
-            <p id="bio">${user.bio || "Biyografi yok"}</p>
+            <p id="bio">${user.bio || "No biography available"}</p>
           </div>
           <div class="col-md-8">
             <div class="d-flex justify-content-around align-items-center mb-3 p-3 bg-light rounded-3 shadow-sm">
               <div class="text-center">
-                <h6 class="text-muted">Takipçi</h6>
+                <h6 class="text-muted">Followers</h6>
                 <p class="fw-bold fs-5">${user.followers}</p>
               </div>
               <div class="text-center">
-                <h6 class="text-muted">Takip Edilen</h6>
+                <h6 class="text-muted">Following</h6>
                 <p class="fw-bold fs-5">${user.following}</p>
               </div>
               <div class="text-center">
-                <h6 class="text-muted">Repolar</h6>
+                <h6 class="text-muted">Repositories</h6>
                 <p class="fw-bold fs-5">${user.public_repos}</p>
               </div>
             </div>
@@ -43,17 +43,17 @@ class UI {
             <ul class="list-group">
               <li class="list-group-item borderzero">
                 <img src="images/company.png" width="30px"> <span id="company">${
-                  user.company || "Şirket bilgisi yok"
+                  user.company || "No company info"
                 }</span>
               </li>
               <li class="list-group-item borderzero">
                 <img src="images/location.png" width="30px"> <span id="location">${
-                  user.location || "Konum bilgisi yok"
+                  user.location || "No location info"
                 }</span>
               </li>
               <li class="list-group-item borderzero">
                 <img src="images/mail.png" width="30px"> <span id="email">${
-                  user.email || "E-posta bilgisi yok"
+                  user.email || "No email info"
                 }</span>
               </li>
             </ul>
@@ -68,7 +68,6 @@ class UI {
     div.className = "alert alert-danger";
     div.textContent = message;
 
-    // cardBody yerine mevcut DOM'daki uygun yere ekleyelim:
     const container = document.querySelector(".searchContainer");
     const searchCard = document.querySelector(".search");
     container.insertBefore(div, searchCard);
@@ -100,10 +99,10 @@ class UI {
         </div>
         <div class="repo-buttons d-flex gap-3">
           <button class="btn btn-secondary">
-            Starlar <span class="badge badge-light">${repo.stargazers_count}</span>
+            Stars <span class="badge badge-light">${repo.stargazers_count}</span>
           </button>
           <button class="btn btn-info">
-            Forklar <span class="badge badge-light">${repo.forks_count}</span>
+            Forks <span class="badge badge-light">${repo.forks_count}</span>
           </button>
         </div>
       `;

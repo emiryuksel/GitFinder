@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -77,40 +77,128 @@
         background-color: #0761bb;
         color: white;
       }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 20px 40px;
+        background-color: #000;
+        color: #ffffff;
+        font-size: 1.2em;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        height: 78px;
+      }
+
+      .header-left {
+        font-weight: bold;
+        font-size: 1.5em;
+      }
+
+      .header-right a {
+        color: #ffffff;
+        margin-left: 20px;
+        font-size: 1.2em;
+        transition: color 0.3s;
+      }
+
+      .header-right a:hover {
+        color: #0071e3;
+      }
+
+      .header-right a i {
+        font-size: 1.2em;
+      }
+
+      /* Add spacing to prevent overlap with header */
+      .mainDiv {
+        padding-top: 120px; /* Same height as header */
+      }
+
+      .home-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .home-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Header */
+      @media (max-width: 768px) {
+        .header {
+          flex-direction: column;
+          align-items: center;
+          height: 75px;
+          text-align: center;
+        }
+
+        .header-left {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        .header-right {
+          margin-top: 10px;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+        }
+      }
     </style>
+    <link rel="shortcut icon" type="image/png" href="../../icon.png" />
   </head>
+
   <body>
-    <div class="container searchContainer">
+    <header class="header">
+      <div class="header-left">
+        <a href="../../index.html" class="home-link">Emir Yüksel</a>
+      </div>
+
+      <div class="header-right">
+        <!--
+        <a href="https://github.com/emiryuksel" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://instagram.com/emiryuksel0" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://discordapp.com/users/emirbabyy" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="en/index.html" class="language-link">English</a>
+        -->
+      </div>
+    </header>
+
+    <div class="container searchContainer mainDiv">
       <div class="search card p-4">
-        <h3 class="text-center">Github Kullanıcılarını Arayın</h3>
+        <h3 class="text-center">Search Github Users</h3>
         <p class="text-center text-muted">
-          Bir kullanıcı adı girin ve bilgilerine ulaşın!
+          Enter a username and access their information!
         </p>
         <form id="github-form" class="d-flex flex-column">
           <input
             type="text"
             name="githubname"
-            s
             id="githubname"
             class="form-control rounded-3 mb-3"
-            placeholder="Github Kullanıcı Adı"
+            placeholder="Github Username"
           />
-          <button type="submit" class="btn btn-dark">Ara</button>
+          <button type="submit" class="btn btn-dark">Search</button>
         </form>
       </div>
 
       <div id="profile" class="mt-4"></div>
 
-      <h3 class="page-heading mt-5">En Son Repolar</h3>
+      <h3 class="page-heading mt-5">Latest Repositories</h3>
       <hr />
       <div id="repos"></div>
 
-      <h3 class="page-heading mt-5">Son Aramalar</h3>
+      <h3 class="page-heading mt-5">Recent Searches</h3>
       <div id="lastSearch">
         <ul class="list-group" id="last-users"></ul>
         <hr />
         <button id="clear-last-users" class="btn clear-btn w-100">
-          Son Arananları Temizle
+          Clear Recent Searches
         </button>
       </div>
     </div>

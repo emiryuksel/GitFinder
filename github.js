@@ -15,7 +15,7 @@ class Github {
     );
 
     if (userResponse.status === 404) {
-      throw new Error("Kullanıcı bulunamadı!");
+      throw new Error("User not found!");
     }
 
     const userData = await userResponse.json();
