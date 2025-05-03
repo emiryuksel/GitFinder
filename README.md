@@ -4,6 +4,10 @@
 
 Using the GitHub API, GitFinder fetches real-time user data including avatar, bio, follower stats, and lists the user's most recent repositories. It also stores a history of your latest searches for convenience.
 
+## 🚀 Live Demo
+
+> https://emiryuksel.site/projects/gitfinder
+
 ## 🚀 Features
 
 - 🔎 Search any GitHub user instantly  
