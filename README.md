@@ -8,7 +8,7 @@ Using the GitHub API, GitFinder fetches real-time user data including avatar, bi
 
 > https://emiryuksel.site/projects/gitfinder
 
-## 🚀 Features
+## ✨ Features
 
 - 🔎 Search any GitHub user instantly  
 - 👤 View profile details (avatar, bio, followers, etc.)  
