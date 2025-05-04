@@ -24,3 +24,4 @@ Using the GitHub API, GitFinder fetches real-time user data including avatar, bi
 - GitHub REST API  
 - Bootstrap 5  
 
+---
